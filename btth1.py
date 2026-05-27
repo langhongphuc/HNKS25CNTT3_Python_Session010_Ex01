@@ -19,10 +19,17 @@ while True:
     choice = input('Mời bạn chọn chức năng (1-5): ')
 
     if choice == '1':
+        total_quantity = 0
         total_price = 0
+
+        for i, item in enumerate(cart_items):
+            total_quantity += item[2]
+
         for i, item in enumerate(cart_items):
             total_price += item[2] * item[3]
-        print('TỔNG TIỀN THANH TOÁN: ', total_price)
+                 
+        print('=> Tổng số lượng sản phẩm trong giỏ:', total_quantity)
+        print('=> TỔNG TIỀN THANH TOÁN:', total_price)
 
     elif choice == '2':
         product_id = input('Nhập mã sản phẩm: ')
