@@ -41,11 +41,11 @@ while True:
             cart_items.append(product_name, quantity, price)
 
     elif choice == '3':
-        product_id = input("Nhập mã sản phẩm cần cập nhật: ")
-        new_quantity = int(input("Nhap so luong moi: "))
+        product_id = input('Nhập mã sản phẩm cần cập nhật: ')
+        new_quantity = int(input('Nhập số lượng mới: '))
 
         if new_quantity <= 0:
-            print("Số lượng phải lớn hơn 0")
+            print('Số lượng phải lớn hơn 0')
 
         else:
             found = False
@@ -55,14 +55,14 @@ while True:
 
                     found = True
 
-                    print("Cập nhật thành công !")
+                    print('Cập nhật thành công !')
 
             if found == False:
 
-                print("Ma san pham khong ton tai trong gio hang.")
+                print('Mã sản phẩm không tồn tại trong giỏ hàng.')
                     
     elif choice == '4':
-        product_id = input("Nhập mã sản phẩm cần xóa: ")
+        product_id = input('Nhập mã sản phẩm cần xóa: ')
 
         found = False
 
@@ -72,11 +72,11 @@ while True:
 
                 found = True
 
-                print("Đã xóa thành công !")
+                print('Đã xóa thành công !')
                 break
 
         if found == False:
-            print("Mã sản phẩm không tồn tại trong giỏ hàng.")
+            print('Mã sản phẩm không tồn tại trong giỏ hàng.')
                 
     elif choice == '5':
         print('Thoát chương trình !!!')
